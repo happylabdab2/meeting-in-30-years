@@ -1,0 +1,184 @@
+:root {
+    --star-speed: 1.5s;
+}
+
+.background {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 500vh;
+    width: 100vw;
+    z-index: 1;
+    background: #485357;
+    background: linear-gradient(180deg, rgb(52, 57, 83) 0%, rgb(77, 94, 97) 9%, rgba(92, 135, 118, 1) 15%, rgba(111, 171, 171, 1) 23%, rgba(167, 211, 106, 1) 31%, rgba(210, 224, 114, 1) 38%, rgba(237, 221, 83, 1) 46%, rgba(175, 233, 240, 1) 56%, rgba(175, 233, 240, 1) 79%, rgba(68, 222, 44, 1) 83%, rgba(201, 144, 28, 1) 86%, rgba(179, 165, 139, 1) 91%, rgba(105, 96, 82, 1) 96%, rgba(64, 59, 59, 1) 100%);
+}
+
+.animals {
+    position: absolute;
+    top: 400vh;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 2em;
+    
+}
+
+.animal {
+    position: absolute;
+    transform: scale(0.5);
+    opacity: 100%;
+    height: 20vw;
+    width: auto;
+}
+
+.japan {
+    position: absolute;
+    top: 150vh;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90vw;
+    opacity: 10%;
+    height: auto;
+}
+
+
+.stars {
+    position: absolute;
+    top: 25vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 2em;
+
+}
+
+.star {
+    position: absolute;
+    transform: scale(0.2) rotate(15deg);
+}
+.star:nth-child(1) {
+    animation: star1 var(--star-speed) linear infinite 3s;
+    right: 20em;
+
+}
+
+.star:nth-child(2) {
+    top: 3em;
+        left: 4em;
+
+    animation: star1 var(--star-speed) linear reverse infinite 1.5s;
+}
+
+.star:nth-child(3) {
+    top: 5em;
+        right: 10em;
+
+    animation: star1 var(--star-speed) linear infinite 3.5s;
+}
+
+/* lol */
+.star:nth-child(4) { 
+    top: 8em;
+    left: 3em;
+    animation: star1 var(--star-speed) linear reverse infinite 60s;
+}
+
+@keyframes star1 {
+    from {
+        transform: rotate(-15deg) scale(0.3);
+
+        opacity: 80%;
+    }
+    35% {
+        transform: rotate(15deg) scale(0.2);
+
+        opacity: 0%;
+    }
+    75% {
+        transform: rotate(15deg) scale(0.2);
+
+        opacity: 0%;
+    }
+    to {
+        transform: rotate(15deg) scale(0.3);
+
+    }
+    /* to {
+        left: -100%;
+    } */
+}
+
+
+.clouds {
+    position: absolute;
+    top: 300vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    /* flex-wrap: wrap; */
+    gap: 2em;
+
+}
+
+.cloud {
+    position: absolute;
+    transform: scale(0.5);
+    opacity: 0%;
+
+}
+.cloud:nth-child(1) {
+    animation: cloud1 10s linear infinite 3s;
+}
+
+.cloud:nth-child(2) {
+    top: 3em;
+    animation: cloud1 7s linear reverse infinite 1.5s;
+}
+
+.cloud:nth-child(3) {
+    top: 5em;
+    animation: cloud1 14s linear infinite 3.5s;
+}
+
+/* lol */
+.cloud:nth-child(4) { 
+    top: 6em;
+    animation: cloud1 1s linear reverse infinite 3s;
+}
+
+/*ktkr*/
+.cloud:nth-child(5) {
+    top: 7em;
+    animation: cloud1 10s linear infinite 5s;
+    font-size: 2em;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+@keyframes cloud1 {
+    from {
+        left: -100%;
+        opacity: 100%;
+    }
+    to {
+        left: 200%;
+    }
+    /* to {
+        left: -100%;
+    } */
+}
