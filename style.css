@@ -1,0 +1,252 @@
+/* html::before {
+    content: 'CodePen ♥ The Web';
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    font-family: monospace;
+    opacity: 0.6;
+    background: rebeccapurple;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+} */
+
+body {
+    scroll-snap-align: start;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+mheader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+}
+
+header {
+    z-index: 10;
+    width: 100vw;
+    background: skyblue;
+    animation: fadein 3s ease-in-out;
+    animation: ud ease-in;
+    animation-timeline: scroll();
+    animation-duration: auto;
+    position: relative;
+}
+
+@keyframes fadein-up {
+    from {
+        opacity: 0%;
+        transform: translate(0, -50%);
+        top: 100%;
+    }
+
+    to {
+        opacity: 100%;
+        top: 50%;
+    }
+}
+
+@keyframes fadein-down {
+    from {
+        opacity: 0%;
+        transform: translate(50%, 50%);
+        bottom: 0%;
+    }
+
+    to {
+        opacity: 100%;
+        bottom: 25%;
+        transform: translate(50%, 50%);
+    }
+}
+
+.link_scroll_h {
+    z-index: 0;
+    overflow: hidden;
+    /* hide the scrollbars */
+    width: 100vw;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    border-top: 0.01px solid rgba(98, 109, 60, 0.384);
+    background: skyblue;
+    position: relative;
+    padding-left: 2em;
+}
+
+.link_scroll {
+    display: flex;
+    gap: 3em;
+    white-space: nowrap;
+}
+
+.link_scroll>* {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5em 3em;
+    background: rgba(200, 255, 0, 0.2);
+    border-radius: 0.25em;
+    cursor: pointer;
+    animation: he11_n 0.5s forwards;
+}
+
+.link_scroll>*:hover {
+    animation: he11 0.5s forwards;
+    background: rgba(200, 255, 0, 0.5);
+}
+
+
+@keyframes he11_n {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes he11 {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.link_scroll_h:hover .link_scroll {
+    animation-play-state: paused;
+}
+
+
+mheader > p {
+    left: 50vw;
+
+    position: relative;
+    display: flex;
+    transform: translate(0, -50%);
+    opacity: 100%;
+    animation: pointscroll 1.75s linear 2s infinite;
+    z-index: 10000000;
+}
+
+@keyframes pointscroll {
+    0% {
+        transform: translateY(0);
+    }
+
+    16% {
+        transform: translateY(100%);
+    }
+
+    32% {
+        transform: translateY(0);
+    }
+
+    48% {
+        transform: translateY(100%);
+    }
+
+    64% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes ud {
+    to {
+        hight: 25%
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0%;
+    }
+
+    to {
+        opacity: 100%;
+    }
+}
+
+
+header>h {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 1em;
+    opacity: 0%;
+    transform: translate(0, -50%);
+    animation: 1s fadein-up ease-in-out 1.25s forwards;
+
+}
+
+.time_Div {
+    opacity: 100%;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding: 0 1em 10px 10px;
+    opacity: 100%;
+    animation: timeload 2s ease-in-out;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    font-size: 1.2rem;
+
+}
+
+@keyframes timeload {
+    to {
+        top: 2em;
+        transform: translate(0, -50%);
+        font-size: 1.2rem;
+        padding: 0 1em 10px 10px;
+        font-weight: 400;
+
+    }
+
+    10% {
+        background-image: linear-gradient(to left, orange, indigo, green, blue, yellow, violet, red);
+
+    }
+
+    from {
+        top: 50vh;
+        transform: translate(-10%, -50%);
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: transparent;
+    }
+}
