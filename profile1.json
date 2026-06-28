@@ -1,0 +1,46 @@
+{
+    "special": false,
+    "profiles": [
+        {
+            "nickname": "Potaito",
+            "name": "Taito Henri Kerman",
+            "pronouns": "he/him",
+            "dob": "04-12-2011",
+            "rsvped": true,
+            "about": "Piirakka tastes epic",
+            "tagged": true,
+            "positions": [
+                "Site Creation Helper",
+                "Composer",
+                "Graphic Designer / Arts",
+                "Game Designer"
+            ],
+            "avatar": "",
+            "quote": [
+                "If you ever feel",
+                "That you are not worth much",
+                "Well that sucks",
+                "I don't care",
+                "",
+                "So I hope you go have a nice life"
+            ],
+            "author": "Taito Kerman",
+            "css_pallet": [
+                "'Segoe UI', 'Times New Roman', serif", 
+                "linear-gradient(135deg, #1a1a1a, #2b1f00, #3d2d00)", 
+                "#d4af37", 
+                "#ffd700", 
+                "#c8b273", 
+                "#a88c3f", 
+                "#f5e6b3", 
+                "#ffd700" 
+            ],
+            "quote_colors": [
+                "#ffd700",
+                "#f5d76e",
+                "#e6c35c",
+                "#cfa93d"
+            ]
+        }
+    ]
+}
