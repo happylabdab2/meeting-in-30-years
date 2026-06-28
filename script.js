@@ -285,7 +285,7 @@ fetch("profile.json")
       document.querySelector("#Main-Content").innerHTML += `
         <div class="profile" style="background: ${profile.css_pallet[1]}; border: 2px solid ${profile.css_pallet[2]};">
           <div class="profile-header">
-            <h1 style="font-family:${profile.css_pallet[0]}; color: ${profile.css_pallet[3]};">${profile.nicname}</h1>
+            <h1 style="font-family:${profile.css_pallet[0]}; color: ${profile.css_pallet[3]};">${profile.nickname}</h1>
             <p3 style="font-size: 1em; opacity: 0.85; color: ${profile.css_pallet[4]};">${profile.name}</p3> 
             <span style="font-size: 0.8em; color: ${profile.css_pallet[5]}; opacity: 0.7;">
               <span>${profile.pronouns}</span> |
@@ -384,7 +384,7 @@ fetch("profile.json")
               font-size: 2.2em;
               text-shadow: 0 0 12px rgba(255,215,0,0.5);
             ">
-              ${profile.nicname}
+              ${profile.nickname}
             </h1>
 
             <p style="
